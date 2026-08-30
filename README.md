@@ -18,16 +18,16 @@
 
 ### 方式一：Claude.ai（网页/App）
 
-1. 下载本仓库Release中的 `star-career-interviewer.skill` 文件
+1. 下载本仓库Release中的 star-career-interviewer.skill 文件
 2. 打开Claude.ai，把这个文件发送到对话框
 3. 界面会出现一张“Save skill”卡片，点击安装
 4. 之后在对话中提出“帮我做职业深度采访”“模拟面试挖掘经历”“帮我分析这个岗位匹配度”等类似请求，会自动触发
 
-> 需要账号/组织开启了Skill安装权限，如果没看到安装入口，说明尚未开放该功能。
+需要账号/组织开启了Skill安装权限，如果没看到安装入口，说明尚未开放该功能。
 
 ### 方式二：Claude Code / 本地环境
 
-将本仓库整个 `star-career-interviewer/` 文件夹放入Claude Code读取 Skill 的目录（具体路径请参考 [Claude Code 官方文档](https://docs.claude.com)），或直接 `git clone` 本仓库到该目录下。
+将本仓库整个 star-career-interviewer/ 文件夹放入Claude Code读取 Skill 的目录（具体路径请参考 Claude Code 官方文档），或直接 git clone 本仓库到该目录下。
 
 ```bash
 git clone https://github.com/<你的用户名>/star-career-interviewer.git
@@ -35,13 +35,13 @@ git clone https://github.com/<你的用户名>/star-career-interviewer.git
 
 ### 方式三：直接粘贴使用（无需安装）
 
-不使用 Claude 的用户，直接下载仓库根目录下的[`star-career-interviewer-full.md`](./star-career-interviewer-full.md)这一个文件。它把 `SKILL.md` 和所有 `references/` 参考文件合并成了单个文件，不用再分别复制多份内容。
+不使用 Claude 的用户，直接下载仓库根目录下的star-career-interviewer-full.md这一个文件。它把 SKILL.md 和所有 references/ 参考文件合并成了单个文件，不用再分别复制多份内容。
 
 根据你用的工具，选一种方式：
 
-- ChatGPT（有Projects/ 自定义GPT功能的账号）：新建一个Project，把这个 `.md` 文件作为知识库文件上传，或粘贴进“Instructions”自定义指令框。之后这个 Project 里的每次对话都会自动带上这份说明。
-- Gemini（Gems）：新建一个Gem，把文件内容粘贴进Gem的说明/指令框，保存后即可复用。
-- 其他任意AI工具（包括不支持自定义指令的简单聊天界面）：直接打开这个 `.md` 文件，全选复制，粘贴到对话最开头，接一句“请按照这份说明帮我做深度职业采访”，即可在当前对话中使用完整功能。缺点是不支持“自定义指令/知识库”的工具，每开一个新对话都要重新粘贴一次。
+ChatGPT（有Projects/ 自定义GPT功能的账号）：新建一个Project，把这个 .md 文件作为知识库文件上传，或粘贴进“Instructions”自定义指令框。之后这个 Project 里的每次对话都会自动带上这份说明。
+Gemini（Gems）：新建一个Gem，把文件内容粘贴进Gem的说明/指令框，保存后即可复用。
+其他任意AI工具（包括不支持自定义指令的简单聊天界面）：直接打开这个 .md 文件，全选复制，粘贴到对话最开头，接一句“请按照这份说明帮我做深度职业采访”，即可在当前对话中使用完整功能。缺点是不支持“自定义指令/知识库”的工具，每开一个新对话都要重新粘贴一次。
 
 ## 使用方式
 
@@ -52,10 +52,11 @@ git clone https://github.com/<你的用户名>/star-career-interviewer.git
 阶段二：JD匹配
 
 采访完成后（或已有整理好的经历），直接把目标岗位的JD文本或截图发给Claude，说“帮我分析这个岗位和我的匹配度”，会得到：
-- 逐条JD要求的拆解与匹配证据
-- 硬性门槛是否满足的诚实判断
-- 综合匹配度评估（附理由，不是孤立打分）
-- 一版只使用已核实经历、未编造数据的定制简历
+
+逐条JD要求的拆解与匹配证据
+硬性门槛是否满足的诚实判断
+综合匹配度评估（附理由，不是孤立打分）
+一版只使用已核实经历、未编造数据的定制简历
 
 ## 核心原则
 
@@ -68,6 +69,7 @@ star-career-interviewer/
 ├── SKILL.md                              # 主文件，定义触发条件与两阶段流程
 └── references/
     ├── opening_questions.md              # 无简历时的开场提问模板
+    ├── education_and_tools_checklist.md  # 教育背景与工具/软件清单核对表（强制环节）
     ├── probing_techniques.md             # 追问技巧库
     ├── verification_workflow.md          # 数字核查具体流程
     ├── experience_bank_template.md       # 阶段一产出文档结构模板
